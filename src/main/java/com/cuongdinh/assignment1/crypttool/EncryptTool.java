@@ -90,8 +90,6 @@ public class EncryptTool {
             Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
             cipher.init(Cipher.DECRYPT_MODE, publicKey);
             byte[] b = cipher.doFinal(keybytes);
-
-            System.err.println(b.length);
             secretKey = new SecretKeySpec(b, "AES");
         }
         return secretKey;

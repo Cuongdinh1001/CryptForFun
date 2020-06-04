@@ -297,7 +297,10 @@ public class EncryptLayout extends javax.swing.JFrame {
         int retvalue = jfc.showOpenDialog(null);
         if (retvalue == JFileChooser.APPROVE_OPTION) {
             File selectFile = jfc.getSelectedFile();
-            jtfSelectRSAKey.setText(selectFile.getAbsolutePath());
+            if (selectFile.getName().equals("private.pri")) {
+                JOptionPane.showMessageDialog(this, "You need to select public key!", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else jtfSelectRSAKey.setText(selectFile.getAbsolutePath());
         }
     }// GEN-LAST:event_btnSelectRSAKeyActionPerformed
 

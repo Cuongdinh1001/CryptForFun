@@ -173,7 +173,13 @@ public class GenRSAKey extends javax.swing.JFrame {
 
     private void btnGenkeyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenkeyActionPerformed
         Genkey genKey = new Genkey();
-        genKey.GenAndSaveRSAKey(jtfSelectDestination.getText(), Integer.parseInt(jcbKeySize.getSelectedItem().toString()));
+        File privateKey = new File(jtfSelectDestination.getText() + "\\private.pri");
+        File publicKey = new File(jtfSelectDestination.getText() + "\\public.pub");
+        if (privateKey.exists() || publicKey.exists()) {
+            int choose = JOptionPane.showConfirmDialog(this, "The RSA Key is available, do you want to gen again?", "Notification", JOptionPane.YES_NO_OPTION);
+            if (choose == 0) //yes
+                genKey.GenAndSaveRSAKey(jtfSelectDestination.getText(), Integer.parseInt(jcbKeySize.getSelectedItem().toString()));
+        }        
         
     }//GEN-LAST:event_btnGenkeyActionPerformed
 

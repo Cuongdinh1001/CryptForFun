@@ -43,6 +43,7 @@ public class DecryptTool {
             byte[] decByte = Files.readAllBytes(Paths.get(srcPath));
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
             cipher.init(Cipher.DECRYPT_MODE, secretKey);
+            System.err.println(decByte.length);
             byte[] b = cipher.doFinal(decByte);
             FileOutputStream out = new FileOutputStream(destinationPath + "\\" + decFile.getName().substring(0, decFile.getName().length()-4));
             out.write(b);

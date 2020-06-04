@@ -8,7 +8,6 @@ package com.cuongdinh.assignment1;
 import java.io.File;
 
 import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileSystemView;
 
 import com.cuongdinh.assignment1.crypttool.Genkey;
@@ -60,6 +59,8 @@ public class GenAESKey extends javax.swing.JFrame {
 
         jtfSelectRSAKey.setVisible(false);
         btnSelectRSAKey.setVisible(false);
+        jtfSelectDestination.setEditable(false);
+        jtfSelectRSAKey.setEditable(false);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

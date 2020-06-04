@@ -37,6 +37,8 @@ public class InfoLayout extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 255));

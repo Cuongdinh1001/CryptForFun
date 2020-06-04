@@ -20,7 +20,6 @@ import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileSystemView;
 
 import com.cuongdinh.assignment1.crypttool.DecryptTool;
-import com.cuongdinh.assignment1.crypttool.EncryptTool;
 
 /**
  *
@@ -257,11 +256,11 @@ public class DecryptLayout extends javax.swing.JFrame {
     private void jcbSelectModeItemStateChanged(java.awt.event.ItemEvent evt) {
         jtfSelectSource.setText("");
         if (jcbSelectMode.getSelectedItem().toString() == "File") {
-            jlbSelectSource.setText("Select File to Encrypt");
+            jlbSelectSource.setText("Select File to Decrypt");
             jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
             jfc.setDialogTitle("Select File");
         } else {
-            jlbSelectSource.setText("Select Folder containing the files to Encrypt");
+            jlbSelectSource.setText("Select Folder containing the files to Decrypt");
             jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
             jfc.setDialogTitle("Select Folder");
         }
